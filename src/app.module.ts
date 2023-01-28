@@ -2,8 +2,11 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+
+
 import { EnvConfiguration } from './config/env.config';
 import { JoivalidationSchema } from './config/joi.validation';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
@@ -13,9 +16,29 @@ import { JoivalidationSchema } from './config/joi.validation';
       validationSchema: JoivalidationSchema,
     }), //
 
-    ServeStaticModule.forRoot({rootPath: join(__dirname,'..','public'), }) // Configuracion para habilidar sitio estatico.
+
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: process.env.DB_HOST,
+      port: +process.env.DBPG_PORT,
+      database: process.env.DBPG_NAME,
+      username: process.env.DBPG_USER,
+      password: process.env.DBPG_PWD,
+      autoLoadEntities: true,
+      synchronize: true
+    }),
+
+    ServeStaticModule.forRoot({rootPath: join(__dirname,'..','public'), }) ,// Configuracion para habilidar sitio estatico.
+    
+    
+
   ],
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule {
+
+  constructor(){
+    // console.log('process.env.DB_PORT:',process.env.DBPG_PORT)
+  }
+}

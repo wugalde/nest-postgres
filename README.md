@@ -8,18 +8,22 @@
 # Inicializar el proyecto Teslo Shop
 
 1. Clonar repo
+
 2. Ejecutar
 ```
   yarn install
 ```
+
 3. Instalar nest cli
 ```
   npm i -g @nestjs/cli
 ```
+
 4. Levantar la base de datos
 ```
   docker compose up -d
 ```
+
 5. Clonar el archivo el __.env.template__ y renombrarlo a .env
 
 6. Llenar las variables de entorno definidas en .env
@@ -28,9 +32,10 @@
 ```
   yarn start:dev
 ```
+
 8. Reconstruir los datos con el seed.
 ```
-  localhost:3000/api/v2/seed
+  localhost:3000/api/v2/teslo
 ```
 
 
@@ -56,4 +61,6 @@
   yarn add joi
 
 
+  # orm
+  yarn add @nestjs/typeorm typeorm pg
 ```

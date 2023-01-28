@@ -7,8 +7,8 @@ services:
     ports:
     - 5432:5432
     environment:
-      POSTGRES_PASSWORD: ${DB_PWD}
-      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DBPG_PWD}
+      POSTGRES_DB: ${DBPG_NAME}
     container_name: teslo
     volumes:
       - ./postgres:/var/lib/postgressql/data
