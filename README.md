@@ -68,4 +68,7 @@
   yarn add uuid
   yarn add -D @types/uuid
 
+  # file upload
+  yarn add -D @types/multer
+
 ```

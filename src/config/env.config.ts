@@ -6,6 +6,8 @@ export const EnvConfiguration =() => ({
     db_port: process.env.DBPG_PORT,
     db_user: process.env.DBPG_USER,
     db_name: process.env.DBPG_NAME,
+
+    hots_api: process.env.HOST_API,
     
     default_limit: +process.env.DEFAULT_LIMIT || 10
 });
