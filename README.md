@@ -35,7 +35,7 @@
 
 8. Reconstruir los datos con el seed.
 ```
-  localhost:3000/api/v2/teslo
+  http://localhost:3001/api/v1/seed
 ```
 
 
@@ -63,4 +63,9 @@
 
   # orm
   yarn add @nestjs/typeorm typeorm pg
+
+  # Instalar las dependencias de UUID
+  yarn add uuid
+  yarn add -D @types/uuid
+
 ```

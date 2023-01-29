@@ -7,6 +7,9 @@ import { join } from 'path';
 import { EnvConfiguration } from './config/env.config';
 import { JoivalidationSchema } from './config/joi.validation';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ProductsModule } from './products/products.module';
+import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -30,7 +33,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
     ServeStaticModule.forRoot({rootPath: join(__dirname,'..','public'), }) ,// Configuracion para habilidar sitio estatico.
     
-    
+    ProductsModule, CommonModule, SeedModule,
 
   ],
   controllers: [],
