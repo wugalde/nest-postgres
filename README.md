@@ -71,4 +71,16 @@
   # file upload
   yarn add -D @types/multer
 
+
+  # Contrase;a de una sola via
+  yarn add bcrypt
+  yarn add -D @types/bcrypt
+
+  #
+  yarn add @nestjs/passport passport
+  yarn add @nestjs/jwt passport-jwt
+  yarn add -D @types/passport-jwt
+
+  yarn add @nestjs/swagger
+
 ```

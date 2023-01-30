@@ -7,6 +7,10 @@ import { fileFilter } from './helpers/file-filter.helper';
 import { fileName } from './helpers/file-name.helper';
 import { Response } from 'express';
 import { ConfigService } from '@nestjs/config';
+import { ApiTags } from '@nestjs/swagger';
+
+
+@ApiTags('Uploads')
 @Controller('files')
 export class FilesController {
   constructor(

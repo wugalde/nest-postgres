@@ -8,6 +8,8 @@ export const EnvConfiguration =() => ({
     db_name: process.env.DBPG_NAME,
 
     hots_api: process.env.HOST_API,
+
+    jwt_secret: process.env.JWT_SECRET,
     
     default_limit: +process.env.DEFAULT_LIMIT || 10
 });
